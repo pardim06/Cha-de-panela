@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chá de Panela | Letícia & Moisés</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/svg+xml" href="/download.svg">
+    <link rel="icon" type="image/svg+xml" href="download.svg">
 
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -16,7 +16,7 @@
             --color-accent: #a89f91;
         }
 
-        body {ee
+        body {
             font-family: 'Montserrat', sans-serif;
             color: var(--color-deep);
             background-color: #fff;
@@ -30,7 +30,7 @@
 
         .hero-bg {
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('./imagens/Site%20Casamento%20.png') center/cover no-repeat;
+                        url('imagens/Site%20Casamento%20.png') center/cover no-repeat;
             height: 100vh;
         }
 
@@ -104,7 +104,6 @@
             transition: transform 0.5s ease;
         }
 
-        /* Ajuste para Categorias no Mobile */
         .category-menu-container {
             display: flex;
             overflow-x: auto;
@@ -227,8 +226,7 @@
         </p>
         
         <div class="flex justify-center mb-10">
-            <!-- Correção da imagem da paleta no mobile -->
-            <img src="/imagens/correallel.jpeg" alt="Preferência de Cores" class="w-full max-w-[280px] h-auto ">
+            <img src="imagens/cores.jpeg" alt="Preferência de Cores" class="w-full max-w-[280px] h-auto ">
         </div>
         
         <div class="flex flex-col md:flex-row gap-4 justify-center">
@@ -278,15 +276,14 @@
                 <p class="text-gray-500 font-light italic">Alguns momentos do nosso caminho até aqui.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                <!-- Ajuste de tamanho e carregamento para mobile -->
                 <div class="photo-card bg-white p-2 shadow-sm">
-                    <img src="/imagens/foto 1.jpeg" alt="Foto 1" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    <img src="imagens/foto 1.jpeg" alt="Foto 1" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500">
                 </div>
                 <div class="photo-card bg-white p-2 shadow-sm">
                     <img src="imagens/foto5.jpeg" alt="Foto 2" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500">
                 </div>
                 <div class="photo-card bg-white p-2 shadow-sm">
-                    <img src="/imagens/foto7.jpeg" alt="Foto 3" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    <img src="imagens/foto7.jpeg" alt="Foto 3" class="w-full h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500">
                 </div>
             </div>
         </div>
@@ -315,7 +312,6 @@
             <h2 class="text-4xl serif mb-4 text-stone-800">Lista de Presentes</h2>
             <div class="w-20 h-[1px] bg-stone-300 mx-auto mb-10"></div>
             
-            <!-- Menu de Categorias com scroll no mobile -->
             <div class="category-menu-container">
                 <div onclick="filterGifts('Cozinha', this)" class="category-circle active">
                     <i data-lucide="chef-hat" class="w-6 h-6 mb-2"></i>
@@ -339,7 +335,6 @@
         </div>
         
         <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gift-list">
-            <!-- Itens injetados via JS -->
         </div>
     </section>
 
@@ -410,88 +405,89 @@
             window.open(`https://www.google.com/calendar/render?action=TEMPLATE&text=Chá+de+Panela:+Letícia+%26+Moisés&location=Av.+Salamanca,+583,+BH&dates=${start}/${end}`, '_blank');
         }
 
-        // --- LISTA COMPLETA RESTAURADA ---
         const gifts = [
             // COZINHA
-            { id: 1, category: "Cozinha", name: "Batedeira", price: "R$337,99", desc: "Batedeira Planetária Mondial Preta", img: "./imagens cozinha/BATEDEIRA+.jpeg", link: "https://www.mercadolivre.com.br/batedeira-planetaria-mondial-700w-bp-03-b/p/MLB18623992" },
-            { id: 2, category: "Cozinha", name: "Sanduicheira", price: "R$ 234,86", desc: "Sanduicheira 4 em 1", img: "./imagens/Screenshot_20260207_181144_Samsung Internet.jpg", link: "https://www.mercadolivre.com.br/sanduicheira-eletrica-4-em-1-antiaderente-jf-stores-grill-waffle-donuts/p/MLB61579430" },
-            { id: 3, category: "Cozinha", name: "Processador", price: "R$189,90", desc: "Processador Philco Preto", img: "./imagens cozinha/espremedor de suco.jpeg", link: "https://www.mercadolivre.com.br/p/MLB49848342" },
-            { id: 4, category: "Cozinha", name: "Jogo de Talheres", price: "R$85,00", desc: "24 peças em Aço Inox", img: "./imagens cozinha/talheres.jpeg", link: "https://a.co/d/d25yLRd" },
-            { id: 5, category: "Cozinha", name: "Jogo de Pratos", price: "R$167,38", desc: "Pratos fundos", img: "./imagens cozinha/pratos.jpeg", link: "https://a.co/d/f5qz2CN" },
-            { id: 6, category: "Cozinha", name: "Jogo de Pratos", price: "R$ 120,00", desc: "Pratos rasos", img: "./imagens cozinha/pratos rasos.jpeg", link: "https://www.amazon.com.br/s?k=chaleira+eletrica" },
-            { id: 7, category: "Cozinha", name: "Aparelho de Jantar", price: "R$ 150,99", desc: "Jogo de pratos rasos e fundos", img: "./imagens cozinha/pratos chiques.jpeg", link: "https://a.co/d/ejrrChV" },
-            { id: 8, category: "Cozinha", name: "Jogo de Facas Tramontina", price: "R$ 87,03", desc: "10 Peças", img: "./imagens cozinha/talher2.0.jpeg", link: "https://a.co/d/TAM7J8ZXMNMF7KYNAG6T" },
-            { id: 9, category: "Cozinha", name: "Utensílios De Cozinha", price: "R$ 37,23", desc: "Kit 12 Utensílios De Cozinha em Silicone", img: "./imagens cozinha/jogo de talheres de cozinha.jpeg", link: "https://a.co/d/iKb6g9r" },
-            { id: 10, category: "Cozinha", name: "Jogo de Copos", price: "R$44,99", desc: "Kit 6 Copos de Vidro Canelado", img: "./imagens cozinha/jogo de copo.jpeg", link: "https://a.co/d/hZFymJP" },
-            { id: 11, category: "Cozinha", name: "Conjunto de Taças em Vidro", price: "R$75,99", desc: "Kit de 6 Taças Caneladas para Sobremesa", img: "./imagens cozinha/taça de alguma coisa.jpeg", link: "https://a.co/d/e95FpJS" },
-            { id: 12, category: "Cozinha", name: "Conjunto 7 Formas", price: "R$171,90", desc: "Formas com Fundo Removível Antiaderente Aço", img: "./imagens cozinha/formas.jpeg", link: "https://s.shopee.com.br/3LKJLshG6b" },
-            { id: 13, category: "Cozinha", name: "Air Fryer", price: "R$650,55 ", desc: "Electrolux Air Fryer Oven Electrolux", img: "./imagens cozinha/airfray.jpeg", link: "https://a.co/d/ah9U8ww" },
-            { id: 14, category: "Cozinha", name: "Descascador ", price: "R$56,90", desc: "Descascador de Frutas e Legumes Tupperware", img: "./imagens cozinha/descascador.jpeg", link: "https://share.google/EEwuCsxkwBdvs3L4a" },
-            { id: 15, category: "Cozinha", name: "Potes Herméticos", price: "R$ 111,68", desc: "9 Potes Herméticos em Acrílico", img: "./imagens cozinha/organizador .jpeg", link: "https://s.shopee.com.br/5q1eM6o4QQ" },
-            { id: 16, category: "Cozinha", name: "Organizador de Geladeira", price: "R$ 55,60", desc: "3 Organizadores de Geladeira", img: "./imagens cozinha/Organizador de Geladeira.jpeg", link: "https://s.shopee.com.br/5AlxYvTSzs" },
-            { id: 17, category: "Cozinha", name: "Organizadores em Acrílico", price: "R$ 44,90", desc: "Kit 10 Organizadores de Acrílico", img: "/imagens cozinha/Kit 10 Organizadores Acrílico.jpeg", link: "https://s.shopee.com.br/W080NOMCZ" },
-            { id: 18, category: "Cozinha", name: "Kit Lixeira Cozinha e Dispenser", price: "R$ 74,90", desc: "Kit Cozinha com Lixeira e Dispenser de Detergente", img: "./imagens cozinha/Kit Lixeira Cozinha e Dispenser.jpeg", link: "https://s.shopee.com.br/1gC5P0cayY" },
-            { id: 19, category: "Cozinha", name: "Conjunto Marinex", price: "R$ 89,61", desc: "Jogo com 7 Travessas", img: "./imagens cozinha/Conjunto Marinex.jpeg", link: "https://s.shopee.com.br/gJYDTLWnr" },
-            { id: 20, category: "Cozinha", name: "Assadeira Oval", price: "R$74,90", desc: "Kit com 3 Assadeiras Oval", img: "./imagens cozinha/Kit 3 Jogo Assadeira.jpeg", link: "https://share.google/pZ1p7RWifbJszDNbN" },
-            { id: 21, category: "Cozinha", name: "Jogo de Xícaras", price: "R$ 80,00", desc: "Conjunto com 6 Xícaras", img: "/imagens cozinha/Conjunto de 6 Xícaras.jpeg", link: "https://share.google/pZ1p7RWifbJszDNbN" },
-            { id: 22, category: "Cozinha", name: "Organizador de Armário", price: "R$ 97,50", desc: "Kit com 4 Organizador de Armário", img: "/imagens cozinha/Kit Organizador de Armário.jpeg", link: "https://s.shopee.com.br/LghpX1QoX" },
-            { id: 40, category: "Cozinha", name: "Jogo Americano", price: "R$ 95,99", desc: "Jogo Americano Tradicional com 4 peças", img: "/imagens cozinha/Jogo Americano.jpeg", link: "https://s.shopee.com.br/9zrDqIxrRa" },
-            { id: 41, category: "Cozinha", name: "Jarra 1L", price: "R$ 38,49", desc: "Conjunto com 2 Jarras de 1L", img: "/imagens cozinha/Jarra 1L.jpeg", link: "https://s.shopee.com.br/6VHLtvoqxm" },
-            { id: 42, category: "Cozinha", name: "Cooktop", price: "R$873,99", desc: "Cooktop Brastemp com 5 Bocas a Gás", img: "/imagens cozinha/cooktop.png", link: "https://www.brastemp.com.br/p" },
-            { id: 43, category: "Cozinha", name: "Panela de Pressão Elétrica", price: "R$ 512,05", desc: "Panela Elétrica 6L Eletrolux", img: "/imagens cozinha/Panela de pressão eletrica.jpeg", link: "https://m.magazineluiza.com.br/p/023301500" },
-            { id: 44, category: "Cozinha", name: "Garrafa Térmica de Café", price: "R$ 42,74", desc: "Garrafa de Café de 1L", img: "/imagens cozinha/garrafa cafe.jpeg", link: "https://m.magazineluiza.com.br/p/dh5hb2e4gf" },
-            { id: 45, category: "Cozinha", name: "Mesa de Jantar 4 cadeiras", price: "R$ 832,20", desc: "Conjunto de Jantar com 4 Cadeiras", img: "/imagens cozinha/Mesa de Jantar 4 cadeiras.jpeg", link: "https://s.shopee.com.br/7KrXx7dAMb" },
-            { id: 46, category: "Cozinha", name: "Jogo de Panelas", price: "R$ 624,99", desc: "Jogo de Panelas com 10 Peças Cerâmica", img: "/imagens cozinha/Jogo de Panelas de Cerâmica.jpeg", link: "https://produto.mercadolivre.com.br/MLB-4170292928" },
-            { id: 47, category: "Cozinha", name: "Peneiras Inox", price: "R$ 35,98", desc: "Kit com 3 Peneiras em Inox", img: "/imagens cozinha/Kit de 3 Peneira Inox.jpeg", link: "https://s.shopee.com.br/9fFSosuCfP" },
-            { id: 48, category: "Cozinha", name: "Kit Saleiro e Paliteiro", price: "R$ 21,00", desc: "Kit Saleiro e Paliteiro de Vidro", img: "/imagens cozinha/Kit Saleiro e Paliteiro.jpeg", link: "https://s.shopee.com.br/2B9S0uKlOU" },
-            { id: 49, category: "Cozinha", name: "Escorredor de Macarrão", price: "R$ 49,99", desc: "Kit com Escorredor de Macarrão e Arroz", img: "/imagens cozinha/Kit Escorredor de Macarrão e de Arroz.jpeg", link: "https://s.shopee.com.br/5fjK9psHKi" },
-            { id: 50, category: "Cozinha", name: "Afiador de faca", price: "R$ 22,90", desc: "Amolador Afiador de Faca Aço Inox", img: "/imagens cozinha/Afiador de faca .jpeg", link: "https://s.shopee.com.br/2qP8lsqqfm" },
-            { id: 51, category: "Cozinha", name: "Lava-Louças", price: "R$ 2.041,55", desc: "Lava-Louças Electrolux 8 Serviços", img: "/imagens cozinha/Lava-Louças.jpeg", link: "https://m.magazineluiza.com.br/p/dghb13dfh2" },
-            { id: 52, category: "Cozinha", name: "Forno Elétrico", price: "R$ 1.089,98", desc: "Forno Elétrico Philco 46L", img: "/imagens cozinha/Forno Elétrico para Embutir.jpeg", link: "https://a.co/d/07lbXwFP" },
-            { id: 53, category: "Cozinha", name: "Medidores", price: "R$ 19,90", desc: "Copo Medidor e Jarra Medidora", img: "/imagens cozinha/Copo Medidor e Jarra Medidora.jpeg", link: "https://s.shopee.com.br/6pvHSG8BTA" },
-            { id: 54, category: "Cozinha", name: "Descanso de Tampa", price: "R$ 29,70", desc: "Kit com 2 Descanso de Tampa de Panela", img: "/imagens cozinha/Descanso de Tampa de Panela.jpeg", link: "https://s.shopee.com.br/8fMwHzxafh" },
-            { id: 55, category: "Cozinha", name: "Descanso de Panela", price: "R$ 29,47", desc: "Kit com 4 Descanso em Bambu", img: "/imagens cozinha/Kit 4 Descanso de Panela em Bambu.jpeg", link: "https://s.shopee.com.br/7fUP6Jk5e7" },
-            { id: 56, category: "Cozinha", name: "Mixer 2 Velocidades", price: "R$ 198,55", desc: "Mixer Electrolux 3 em 1", img: "/imagens cozinha/Mix 2 Velocidades.jpeg", link: "https://m.magazineluiza.com.br/p/231232500" },
-            { id: 57, category: "Cozinha", name: "Tigela Bowl Inox", price: "R$ 44,88", desc: "Conjunto de 5 Tigelas Bowl Inox", img: "/imagens cozinha/Tigela Bowl Inox .jpeg", link: "https://s.shopee.com.br/3qHgYhbrYG" },
-            
+            { id: 1, category: "Cozinha", name: "Batedeira", price: "R$337,99", desc: "Batedeira Planetária Mondial Preta", img: "imagens cozinha/BATEDEIRA+.jpeg", link: "https://www.mercadolivre.com.br/batedeira-planetaria-mondial-700w-bp-03-b/p/MLB18623992" },
+            { id: 2, category: "Cozinha", name: "Sanduicheira", price: "R$ 234,86", desc: "Sanduicheira 4 em 1", img: "imagens/Screenshot_20260207_181144_Samsung Internet.jpg", link: "https://www.mercadolivre.com.br/sanduicheira-eletrica-4-em-1-antiaderente-jf-stores-grill-waffle-donuts/p/MLB61579430" },
+            { id: 3, category: "Cozinha", name: "Processador", price: "R$189,90", desc: "Processador Philco Preto", img: "imagens cozinha/espremedor de suco.jpeg", link: "https://www.mercadolivre.com.br/p/MLB49848342" },
+            { id: 4, category: "Cozinha", name: "Jogo de Talheres", price: "R$85,00", desc: "24 peças em Aço Inox", img: "imagens cozinha/talheres.jpeg", link: "https://a.co/d/d25yLRd" },
+            { id: 5, category: "Cozinha", name: "Jogo de Pratos", price: "R$167,38", desc: "Pratos fundos", img: "imagens cozinha/pratos.jpeg", link: "https://a.co/d/f5qz2CN" },
+            { id: 6, category: "Cozinha", name: "Jogo de Pratos", price: "R$ 120,00", desc: "Pratos rasos", img: "imagens cozinha/pratos rasos.jpeg", link: "https://www.amazon.com.br/s?k=chaleira+eletrica" },
+            { id: 7, category: "Cozinha", name: "Aparelho de Jantar", price: "R$ 150,99", desc: "Jogo de pratos rasos e fundos", img: "imagens cozinha/pratos chiques.jpeg", link: "https://a.co/d/ejrrChV" },
+            { id: 8, category: "Cozinha", name: "Jogo de Facas Tramontina", price: "R$ 87,03", desc: "10 Peças", img: "imagens cozinha/talher2.0.jpeg", link: "https://a.co/d/TAM7J8ZXMNMF7KYNAG6T" },
+            { id: 9, category: "Cozinha", name: "Utensílios De Cozinha", price: "R$ 37,23", desc: "Kit 12 Utensílios De Cozinha em Silicone", img: "imagens cozinha/jogo de talheres de cozinha.jpeg", link: "https://a.co/d/iKb6g9r" },
+            { id: 10, category: "Cozinha", name: "Jogo de Copos", price: "R$44,99", desc: "Kit 6 Copos de Vidro Canelado", img: "imagens cozinha/jogo de copo.jpeg", link: "https://a.co/d/hZFymJP" },
+            { id: 11, category: "Cozinha", name: "Conjunto de Taças em Vidro", price: "R$75,99", desc: "Kit de 6 Taças Caneladas para Sobremesa", img: "imagens cozinha/taça de alguma coisa.jpeg", link: "https://a.co/d/e95FpJS" },
+            { id: 12, category: "Cozinha", name: "Conjunto 7 Formas", price: "R$171,90", desc: "Formas com Fundo Removível Antiaderente Aço", img: "imagens cozinha/formas.jpeg", link: "https://s.shopee.com.br/3LKJLshG6b" },
+            { id: 13, category: "Cozinha", name: "Air Fryer", price: "R$650,55 ", desc: "Electrolux Air Fryer Oven Electrolux", img: "imagens cozinha/airfray.jpeg", link: "https://a.co/d/ah9U8ww" },
+            { id: 14, category: "Cozinha", name: "Descascador ", price: "R$56,90", desc: "Descascador de Frutas e Legumes Tupperware", img: "imagens cozinha/descascador.jpeg", link: "https://share.google/EEwuCsxkwBdvs3L4a" },
+            { id: 15, category: "Cozinha", name: "Potes Herméticos", price: "R$ 111,68", desc: "9 Potes Herméticos em Acrílico", img: "imagens cozinha/organizador .jpeg", link: "https://s.shopee.com.br/5q1eM6o4QQ" },
+            { id: 16, category: "Cozinha", name: "Organizador de Geladeira", price: "R$ 55,60", desc: "3 Organizadores de Geladeira", img: "imagens cozinha/Organizador de Geladeira.jpeg", link: "https://s.shopee.com.br/5AlxYvTSzs" },
+            { id: 17, category: "Cozinha", name: "Organizadores em Acrílico", price: "R$ 44,90", desc: "Kit 10 Organizadores de Acrílico", img: "imagens cozinha/Kit 10 Organizadores Acrílico.jpeg", link: "https://s.shopee.com.br/W080NOMCZ" },
+            { id: 18, category: "Cozinha", name: "Kit Lixeira Cozinha e Dispenser", price: "R$ 74,90", desc: "Kit Cozinha com Lixeira e Dispenser de Detergente", img: "imagens cozinha/Kit Lixeira Cozinha e Dispenser.jpeg", link: "https://s.shopee.com.br/1gC5P0cayY" },
+            { id: 19, category: "Cozinha", name: "Conjunto Marinex", price: "R$ 89,61", desc: "Jogo com 7 Travessas", img: "imagens cozinha/Conjunto Marinex.jpeg", link: "https://s.shopee.com.br/gJYDTLWnr" },
+            { id: 20, category: "Cozinha", name: "Assadeira Oval", price: "R$74,90", desc: "Kit com 3 Assadeiras Oval", img: "imagens cozinha/Kit 3 Jogo Assadeira.jpeg", link: "https://share.google/pZ1p7RWifbJszDNbN" },
+            { id: 21, category: "Cozinha", name: "Jogo de Xícaras", price: "R$ 80,00", desc: "Conjunto com 6 Xícaras", img: "imagens cozinha/Conjunto de 6 Xícaras.jpeg", link: "https://share.google/pZ1p7RWifbJszDNbN" },
+            { id: 22, category: "Cozinha", name: "Organizador de Armário", price: "R$ 97,50", desc: "Kit com 4 Organizador de Armário", img: "imagens cozinha/Kit Organizador de Armário.jpeg", link: "https://s.shopee.com.br/LghpX1QoX" },
+            { id: 40, category: "Cozinha", name: "Jogo Americano", price: "R$ 95,99", desc: "Jogo Americano Tradicional com 4 peças", img: "imagens cozinha/Jogo Americano.jpeg", link: "https://s.shopee.com.br/9zrDqIxrRa" },
+            { id: 41, category: "Cozinha", name: "Jarra 1L", price: "R$ 38,49", desc: "Conjunto com 2 Jarras de 1L", img: "imagens cozinha/Jarra 1L.jpeg", link: "https://s.shopee.com.br/6VHLtvoqxm" },
+            { id: 42, category: "Cozinha", name: "Cooktop", price: "R$873,99", desc: "Cooktop Brastemp com 5 Bocas a Gás", img: "imagens cozinha/cooktop.png", link: "https://www.brastemp.com.br/p" },
+            { id: 43, category: "Cozinha", name: "Panela de Pressão Elétrica", price: "R$ 512,05", desc: "Panela Elétrica 6L Eletrolux", img: "imagens cozinha/Panela de pressão eletrica.jpeg", link: "https://m.magazineluiza.com.br/p/023301500" },
+            { id: 44, category: "Cozinha", name: "Garrafa Térmica de Café", price: "R$ 42,74", desc: "Garrafa de Café de 1L", img: "imagens cozinha/garrafa cafe.jpeg", link: "https://m.magazineluiza.com.br/p/dh5hb2e4gf" },
+            { id: 45, category: "Cozinha", name: "Mesa de Jantar 4 cadeiras", price: "R$ 832,20", desc: "Conjunto de Jantar com 4 Cadeiras", img: "imagens cozinha/Mesa de Jantar 4 cadeiras.jpeg", link: "https://s.shopee.com.br/7KrXx7dAMb" },
+            { id: 46, category: "Cozinha", name: "Jogo de Panelas", price: "R$ 624,99", desc: "Jogo de Panelas com 10 Peças Cerâmica", img: "imagens cozinha/Jogo de Panelas de Cerâmica.jpeg", link: "https://produto.mercadolivre.com.br/MLB-4170292928" },
+            { id: 47, category: "Cozinha", name: "Peneiras Inox", price: "R$ 35,98", desc: "Kit com 3 Peneiras em Inox", img: "imagens cozinha/Kit de 3 Peneira Inox.jpeg", link: "https://s.shopee.com.br/9fFSosuCfP" },
+            { id: 48, category: "Cozinha", name: "Kit Saleiro e Paliteiro", price: "R$ 21,00", desc: "Kit Saleiro e Paliteiro de Vidro", img: "imagens cozinha/Kit Saleiro e Paliteiro.jpeg", link: "https://s.shopee.com.br/2B9S0uKlOU" },
+            { id: 49, category: "Cozinha", name: "Escorredor de Macarrão", price: "R$ 49,99", desc: "Kit com Escorredor de Macarrão e Arroz", img: "imagens cozinha/Kit Escorredor de Macarrão e de Arroz.jpeg", link: "https://s.shopee.com.br/5fjK9psHKi" },
+            { id: 50, category: "Cozinha", name: "Afiador de faca", price: "R$ 22,90", desc: "Amolador Afiador de Faca Aço Inox", img: "imagens cozinha/Afiador de faca .jpeg", link: "https://s.shopee.com.br/2qP8lsqqfm" },
+            { id: 51, category: "Cozinha", name: "Lava-Louças", price: "R$ 2.041,55", desc: "Lava-Louças Electrolux 8 Serviços", img: "imagens cozinha/Lava-Louças.jpeg", link: "https://m.magazineluiza.com.br/p/dghb13dfh2" },
+            { id: 52, category: "Cozinha", name: "Forno Elétrico", price: "R$ 1.089,98", desc: "Forno Elétrico Philco 46L", img: "imagens cozinha/Forno Elétrico para Embutir.jpeg", link: "https://a.co/d/07lbXwFP" },
+            { id: 53, category: "Cozinha", name: "Medidores", price: "R$ 19,90", desc: "Copo Medidor e Jarra Medidora", img: "imagens cozinha/Copo Medidor e Jarra Medidora.jpeg", link: "https://s.shopee.com.br/6pvHSG8BTA" },
+            { id: 54, category: "Cozinha", name: "Descanso de Tampa", price: "R$ 29,70", desc: "Kit com 2 Descanso de Tampa de Panela", img: "imagens cozinha/Descanso de Tampa de Panela.jpeg", link: "https://s.shopee.com.br/8fMwHzxafh" },
+            { id: 55, category: "Cozinha", name: "Descanso de Panela", price: "R$ 29,47", desc: "Kit com 4 Descanso em Bambu", img: "imagens cozinha/Kit 4 Descanso de Panela em Bambu.jpeg", link: "https://s.shopee.com.br/7fUP6Jk5e7" },
+            { id: 56, category: "Cozinha", name: "Mixer 2 Velocidades", price: "R$ 198,55", desc: "Mixer Electrolux 3 em 1", img: "imagens cozinha/Mix 2 Velocidades.jpeg", link: "https://m.magazineluiza.com.br/p/231232500" },
+            { id: 57, category: "Cozinha", name: "Tigela Bowl Inox", price: "R$ 44,88", desc: "Conjunto de 5 Tigelas Bowl Inox", img: "imagens cozinha/Tigela Bowl Inox .jpeg", link: "https://s.shopee.com.br/3qHgYhbrYG" },
+            { id: 58, category: "Cozinha", name: "Descanso Panela", price: "R$ 30", desc: "Kit 2 peças.", img: "imagens/58.jpg", link: "https://www.amazon.com.br/s?k=descanso+panela" },
+            { id: 59, category: "Cozinha", name: "Saca-rolhas", price: "R$ 55", desc: "Tipo borboleta.", img: "imagens/59.jpg", link: "https://www.amazon.com.br/s?k=saca+rolhas" },
+            { id: 60, category: "Cozinha", name: "Kit Pano Prato", price: "R$ 50", desc: "10 unidades 100% algodão.", img: "imagens/60.jpg", link: "https://www.amazon.com.br/s?k=panos+prato" },
 
             // QUARTO
-            { id: 30, category: "Quarto", name: "Edredom Casal", price: "R$149,90", desc: "Edredom Casal 300 Fios", img: "./imagens quarto/forro de cama1.jpeg", link: "https://share.google/2vKbDrMdXFsKIUxqm" },
-            { id: 31, category: "Quarto", name: "Cobertor King Alaska", price: "R$149,90", desc: "Dupla Face Manta", img: "./imagens quarto/forro de cama2.jpeg", link: "https://share.google/XM626asg5vUhi5CRW" },
-            { id: 32, category: "Quarto", name: "Edredom Casal", price: "R$149,90", desc: "Toque de Pluma Matelassê", img: "./imagens quarto/forro de cama3.jpeg", link: "https://share.google/f4QnqjNRoSGerVvzE" },
-            { id: 99, category: "Quarto", name: "Cobertor Casal", price: "R$99,90", desc: "Microfibra Coberta", img: "./imagens quarto/forro 4.jpeg", link: "https://share.google/nDIt5KpanVeqRcxxg" },
-            { id: 100, category: "Quarto", name: "Jogo de Lençol", price: "R$107,90", desc: "Jogo de Casal 4 Peças", img: "./imagens quarto/jogo de lencou.jpeg", link: "https://share.google/voLwyPln09gjAH7dT" },
-            { id: 102, category: "Quarto", name: "Jogo de Lençol", price: "R$119,90", desc: "Jogo de Casal 3 Peças", img: "./imagens quarto/lençou4.jpeg", link: "https://share.google/xQTjkwMqEWR9w5Yoo" },
-            { id: 103, category: "Quarto", name: "Travesseiro", price: "R$171,80", desc: "Kit com 4 Travesseiros Pluma", img: "/imagens quarto/travesseriro.jpeg", link: "https://m.magazineluiza.com.br/p/hg40c2891j" },
-            { id: 104, category: "Quarto", name: "Cabeceira Estofada", price: "R$ 39,80", desc: "Bege Escuro", img: "/imagens quarto/Cabeceira Estofada Bege Escuro.jpeg", link: "https://s.shopee.com.br/4fqn1mtgnt" },
-            { id: 105, category: "Quarto", name: "Colchão Casal", price: "R$ 3.365,00", desc: "Colchão Casal Emma", img: "/imagens quarto/Colchão Casal.jpeg", link: "https://www.mercadolivre.com.br/p/MLB65572925" },
+            { id: 30, category: "Quarto", name: "Edredom Casal", price: "R$149,90", desc: "Edredom Casal 300 Fios", img: "imagens quarto/forro de cama1.jpeg", link: "https://share.google/2vKbDrMdXFsKIUxqm" },
+            { id: 31, category: "Quarto", name: "Cobertor King Alaska", price: "R$149,90", desc: "Dupla Face Manta", img: "imagens quarto/forro de cama2.jpeg", link: "https://share.google/XM626asg5vUhi5CRW" },
+            { id: 32, category: "Quarto", name: "Edredom Casal", price: "R$149,90", desc: "Toque de Pluma Matelassê", img: "imagens quarto/forro de cama3.jpeg", link: "https://share.google/f4QnqjNRoSGerVvzE" },
+            { id: 99, category: "Quarto", name: "Cobertor Casal", price: "R$99,90", desc: "Microfibra Coberta", img: "imagens quarto/forro 4.jpeg", link: "https://share.google/nDIt5KpanVeqRcxxg" },
+            { id: 100, category: "Quarto", name: "Jogo de Lençol", price: "R$107,90", desc: "Jogo de Casal 4 Peças", img: "imagens quarto/jogo de lencou.jpeg", link: "https://share.google/voLwyPln09gjAH7dT" },
+            { id: 102, category: "Quarto", name: "Jogo de Lençol", price: "R$119,90", desc: "Jogo de Casal 3 Peças", img: "imagens quarto/lençou4.jpeg", link: "https://share.google/xQTjkwMqEWR9w5Yoo" },
+            { id: 103, category: "Quarto", name: "Travesseiro", price: "R$171,80", desc: "Kit com 4 Travesseiros Pluma", img: "imagens quarto/travesseriro.jpeg", link: "https://m.magazineluiza.com.br/p/hg40c2891j" },
+            { id: 104, category: "Quarto", name: "Cabeceira Estofada", price: "R$ 39,80", desc: "Bege Escuro", img: "imagens quarto/Cabeceira Estofada Bege Escuro.jpeg", link: "https://s.shopee.com.br/4fqn1mtgnt" },
+            { id: 105, category: "Quarto", name: "Colchão Casal", price: "R$ 3.365,00", desc: "Colchão Casal Emma", img: "imagens quarto/Colchão Casal.jpeg", link: "https://www.mercadolivre.com.br/p/MLB65572925" },
 
             // BANHEIRO
-            { id: 61, category: "Banheiro", name: "Cesto de Roupa", price: "R$65,99", desc: "Dobrável.", img: "/imagens banheiro/cesto de roupaa.jpeg", link: "https://www.amazon.com.br/s?k=cesto+roupa" },
-            { id: 62, category: "Banheiro", name: "Jogo De Banho 2 Peças", price: "R$34,90", desc: "Conjunto Toalhas", img: "./imagens banheiro/toalhe.jpeg", link: "https://share.google/HV05FFORxaCupWBUC" },
-            { id: 63, category: "Banheiro", name: "Jogo De Banho 5 Peças", price: "R$167,90", desc: "Verde 100% Algodão", img: "./imagens banheiro/tolha verde.jpeg", link: "https://www.lindacasa.com.br/p" },
-            { id: 64, category: "Banheiro", name: "Jogo De Banho 5 Peças", price: "R$167,90", desc: "Branco 100% Algodão", img: "./imagens banheiro/toalha branca .jpeg", link: "https://www.lindacasa.com.br/p" },
-            { id: 65, category: "Banheiro", name: "Jogo De Banho 5 Peças", price: "R$229,90", desc: "Azul 100% Algodão", img: "./imagens banheiro/toalha azul.jpeg", link: "https://www.lindacasa.com.br/p" },
-            { id: 66, category: "Banheiro", name: "Kit Lixeira + Escova", price: "R$ 80,40", desc: "Lixeira 5L e Escova Sanitária", img: "/imagens banheiro/Kit Lixeira 5L + Escova .jpeg", link: "https://s.shopee.com.br/20q1qA4Q5d" },
-            { id: 67, category: "Banheiro", name: "Chuveiro", price: "R$ 265,44", desc: "Ducha Elétrica", img: "/imagens banheiro/Chuveiro .jpeg", link: "https://www.mercadolivre.com.br/p/MLB15480105" },
-            { id: 68, category: "Banheiro", name: "Kit Lavabo Banheiro", price: "R$ 58,77", desc: "Conjunto para Pia", img: "/imagens banheiro/Kit Lavabo Banheiro.jpeg", link: "https://www.mercadolivre.com.br/p/MLB6107616580" },
+            { id: 61, category: "Banheiro", name: "Cesto de Roupa", price: "R$65,99", desc: "Dobrável.", img: "imagens banheiro/cesto de roupaa.jpeg", link: "https://www.amazon.com.br/s?k=cesto+roupa" },
+            { id: 62, category: "Banheiro", name: "Jogo De Banho 2 Peças", price: "R$34,90", desc: "Conjunto Toalhas", img: "imagens banheiro/toalhe.jpeg", link: "https://share.google/HV05FFORxaCupWBUC" },
+            { id: 63, category: "Banheiro", name: "Jogo De Banho 5 Peças", price: "R$167,90", desc: "Verde 100% Algodão", img: "imagens banheiro/tolha verde.jpeg", link: "https://www.lindacasa.com.br/p" },
+            { id: 64, category: "Banheiro", name: "Jogo De Banho 5 Peças", price: "R$167,90", desc: "Branco 100% Algodão", img: "imagens banheiro/toalha branca .jpeg", link: "https://www.lindacasa.com.br/p" },
+            { id: 65, category: "Banheiro", name: "Jogo De Banho 5 Peças", price: "R$229,90", desc: "Azul 100% Algodão", img: "imagens banheiro/toalha azul.jpeg", link: "https://www.lindacasa.com.br/p" },
+            { id: 66, category: "Banheiro", name: "Kit Lixeira + Escova", price: "R$ 80,40", desc: "Lixeira 5L e Escova Sanitária", img: "imagens banheiro/Kit Lixeira 5L + Escova .jpeg", link: "https://s.shopee.com.br/20q1qA4Q5d" },
+            { id: 67, category: "Banheiro", name: "Chuveiro", price: "R$ 265,44", desc: "Ducha Elétrica", img: "imagens banheiro/Chuveiro .jpeg", link: "https://www.mercadolivre.com.br/p/MLB15480105" },
+            { id: 68, category: "Banheiro", name: "Kit Lavabo Banheiro", price: "R$ 58,77", desc: "Conjunto para Pia", img: "imagens banheiro/Kit Lavabo Banheiro.jpeg", link: "https://www.mercadolivre.com.br/p/MLB6107616580" },
 
             // OUTROS
-            { id: 23, category: "Outros", name: "Luminárias", price: "R$ 64,28", desc: "Kit com 4 Pendentes", img: "/imagens/Kit 4 Pendente.jpeg", link: "https://s.shopee.com.br/AAAeGMIEwH" },
-            { id: 24, category: "Outros", name: "Porta Chaves", price: "R$ 30,88", desc: "Organizador de Parede", img: "/imagens/Porta Chaves Organizador.jpeg", link: "https://s.shopee.com.br/8V2QHnpaid" },
-            { id: 25, category: "Outros", name: "Suporte para Copos", price: "R$ 28,40", desc: "Apoio de Braço Sofá", img: "/imagens/Suporte para Copos no Sofá.jpeg", link: "https://s.shopee.com.br/8V2QHptFge" },
+            { id: 23, category: "Outros", name: "Luminárias", price: "R$ 64,28", desc: "Kit com 4 Pendentes", img: "imagens/Kit 4 Pendente.jpeg", link: "https://s.shopee.com.br/AAAeGMIEwH" },
+            { id: 24, category: "Outros", name: "Porta Chaves", price: "R$ 30,88", desc: "Organizador de Parede", img: "imagens/Porta Chaves Organizador.jpeg", link: "https://s.shopee.com.br/8V2QHnpaid" },
+            { id: 25, category: "Outros", name: "Suporte para Copos", price: "R$ 28,40", desc: "Apoio de Braço Sofá", img: "imagens/Suporte para Copos no Sofá.jpeg", link: "https://s.shopee.com.br/8V2QHptFge" },
             { id: 26, category: "Outros", name: "Aspirador de pó", price: "R$139,90", desc: "Britânia 2 em 1", img: "imagens/aspi.jpeg", link: "https://www.mercadolivre.com.br/p/MLB25860033" },
             { id: 27, category: "Outros", name: "Cortina Blackout", price: "R$114,67", desc: "Bege para Quarto", img: "imagens/cortina.jpeg", link: "https://m.magazineluiza.com.br/p/dbdeg4aheb" },
-            { id: 33, category: "Outros", name: "Lava e Seca", price: "R$ 2.998,99", desc: "Mster Clean 11kg", img: "/imagens/Lava e Seca.jpeg", link: "https://a.co/d/00pCTlW7" },
-            { id: 34, category: "Outros", name: "Ar Condicionado", price: "R$2.859,00", desc: "Split 9.000 Btus", img: "/imagens/Ar condicionado.jpeg", link: "https://a.co/d/0cliQQp3" },
-            { id: 35, category: "Outros", name: "Almofadas", price: "R$ 55,25", desc: "Kit 4 Almofadas Preto/Cinza", img: "/imagens/Kit 4 almofadas Preta e Cinza.jpeg", link: "https://s.shopee.com.br/5L6TpHkDQ4" },
-            { id: 36, category: "Outros", name: "Cortina Blackout", price: "R$ 114,67", desc: "Cinza para Sala", img: "/imagens//Cortina Branca.jpeg", link: "https://m.magazineluiza.com.br/p/bj49fbcc48" },
-            { id: 37, category: "Outros", name: "Kit 2 Baldes", price: "R$ 21,94", desc: "Baldes de Plástico", img: "/imagens/Kit 2 Balde de Plástico.jpeg", link: "https://s.shopee.com.br/3fyFnPdJzc" },
-            { id: 38, category: "Outros", name: "Kit Limpeza", price: "R$ 16,00", desc: "Vassoura, Rodo e Pá", img: "/imagens/Kit Vassoura, Rodo e Pá.jpeg", link: "https://m.magazineluiza.com.br/p/df2daj959f" },
-            { id: 39, category: "Outros", name: "Kit Dispenser", price: "R$ 59,00", desc: "Lavanderia 1,5L + 2,3L", img: "/imagens/Kit 2 Dispenser Lavanderia.jpeg", link: "https://s.shopee.com.br/4VXMlH2p5H" },
-            { id: 40, category: "Outros", name: "Robô Aspirador", price: "R$ 3.560,00", desc: "Estação Inteligente", img: "/imagens/Robô aspirador .jpeg", link: "https://www.mercadolivre.com.br/p/MLB36337838" },
-            { id: 41, category: "Outros", name: "Televisão", price: "R$4.589,00", desc: "Samsung 55 polegadas OLED", img: "/imagens/tv.png", link: "https://www.amazon.com.br/p/B0FKDXHGM6" },
-            { id: 42, category: "Outros", name: "Varal retrátil", price: "R$ 112,99", desc: "100cm com 6 Varetas", img: "/imagens/Varal retrátil 100cm.jpeg", link: "https://s.shopee.com.br/2VmIJ87rvX" }
+            { id: 33, category: "Outros", name: "Lava e Seca", price: "R$ 2.998,99", desc: "Mster Clean 11kg", img: "imagens/Lava e Seca.jpeg", link: "https://a.co/d/00pCTlW7" },
+            { id: 34, category: "Outros", name: "Ar Condicionado", price: "R$2.859,00", desc: "Split 9.000 Btus", img: "imagens/Ar condicionado.jpeg", link: "https://a.co/d/0cliQQp3" },
+            { id: 35, category: "Outros", name: "Almofadas", price: "R$ 55,25", desc: "Kit 4 Almofadas Preto/Cinza", img: "imagens/Kit 4 almofadas Preta e Cinza.jpeg", link: "https://s.shopee.com.br/5L6TpHkDQ4" },
+            { id: 36, category: "Outros", name: "Cortina Blackout", price: "R$ 114,67", desc: "Cinza para Sala", img: "imagens/Cortina Branca.jpeg", link: "https://m.magazineluiza.com.br/p/bj49fbcc48" },
+            { id: 37, category: "Outros", name: "Kit 2 Baldes", price: "R$ 21,94", desc: "Baldes de Plástico", img: "imagens/Kit 2 Balde de Plástico.jpeg", link: "https://s.shopee.com.br/3fyFnPdJzc" },
+            { id: 38, category: "Outros", name: "Kit Limpeza", price: "R$ 16,00", desc: "Vassoura, Rodo e Pá", img: "imagens/Kit Vassoura, Rodo e Pá.jpeg", link: "https://m.magazineluiza.com.br/p/df2daj959f" },
+            { id: 39, category: "Outros", name: "Kit Dispenser", price: "R$ 59,00", desc: "Lavanderia 1,5L + 2,3L", img: "imagens/Kit 2 Dispenser Lavanderia.jpeg", link: "https://s.shopee.com.br/4VXMlH2p5H" },
+            { id: 40, category: "Outros", name: "Robô Aspirador", price: "R$ 3.560,00", desc: "Estação Inteligente", img: "imagens/Robô aspirador .jpeg", link: "https://www.mercadolivre.com.br/p/MLB36337838" },
+            { id: 41, category: "Outros", name: "Televisão", price: "R$4.589,00", desc: "Samsung 55 polegadas OLED", img: "imagens/tv.png", link: "https://www.amazon.com.br/p/B0FKDXHGM6" },
+            { id: 42, category: "Outros", name: "Varal retrátil", price: "R$ 112,99", desc: "100cm com 6 Varetas", img: "imagens/Varal retrátil 100cm.jpeg", link: "https://s.shopee.com.br/2VmIJ87rvX" }
         ];
 
         function filterGifts(category, element) {
